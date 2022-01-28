@@ -8,13 +8,17 @@ const GlobalStyleSheet = createGlobalStyle`
   box-sizing: border-box;
 }
 :root{
-  ${props => Object.keys(props.theme.colors).map((colorName) => `--${colorName}:${props.theme.colors[colorName as colorVariants]};`)}
+  ${(props) =>
+    Object.keys(props.theme.colors).map(
+      (colorName) =>
+        `--${colorName}:${props.theme.colors[colorName as colorVariants]};`
+    )}
 }
 body{
   font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: ${props => props.theme.colors.primary};
-  color:${props => props.theme.colors.secondery};
+  background-color: var(--primary);
+  color:var(--textColor);
 }
 `;
 
