@@ -3,5 +3,8 @@
     "activityBar.background": "#3C2926",
     "titleBar.activeBackground": "#543935",
     "titleBar.activeForeground": "#FCFAFA"
-  }
+  },
+  "cSpell.words": [
+    "localstorage"
+  ]
 }
