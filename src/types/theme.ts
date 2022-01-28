@@ -4,6 +4,7 @@ export type Mode = "light" | "dark";
 export type colorVariants =
   | "primary"
   | "secondery"
+  | "textColor"
   | "success"
   | "warning"
   | "error";
