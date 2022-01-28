@@ -3,14 +3,16 @@ import { Breakpoints, colorVariants, Mode } from "./types";
 
 const LightColors: { [key in colorVariants]: string } = {
   primary: "#fff",
-  secondery: "#2c2c2c",
+  secondery: "#fafafa",
   success: "green",
+  textColor:"#111214",
   error: "yellow",
   warning: "red",
 };
 const darkColors: { [key in colorVariants]: string } = {
-  primary: "#2c2c2c",
-  secondery: "#fff",
+  primary: "#202d36",
+  secondery: "#2b3743",
+  textColor:"#ffffff",
   success: "green",
   error: "yellow",
   warning: "red",
