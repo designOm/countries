@@ -20,19 +20,19 @@ export const inputSurface = css`
 export const AppContainer = styled("div")`
   max-width: 100%;
   margin: 0 auto;
-  ${(props) => props.theme.mediaFor("min", "sm")} {
+  ${(props) => props.theme.mediaFor("min", {for:"sm"})} {
     max-width: 540px;
   }
-  ${(props) => props.theme.mediaFor("min", "md")} {
+  ${(props) => props.theme.mediaFor("min", {for:"md"})} {
     max-width: 720px;
   }
-  ${(props) => props.theme.mediaFor("min", "lg")} {
+  ${(props) => props.theme.mediaFor("min", {for:"lg"})} {
     max-width: 960px;
   }
-  ${(props) => props.theme.mediaFor("min", "xl")} {
+  ${(props) => props.theme.mediaFor("min", {for:"xl"})} {
     max-width: 1140px;
   }
-  ${(props) => props.theme.mediaFor("min", "xxl")} {
+  ${(props) => props.theme.mediaFor("min", {for:"xxl"})} {
     max-width: 1320px;
   }
 `;

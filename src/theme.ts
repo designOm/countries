@@ -1,5 +1,5 @@
 import { DefaultTheme } from "styled-components";
-import { Breakpoints, colorVariants, Mode } from "./types";
+import { Breakpoints, colorVariants, mediaBreakpoints, Mode } from "./types";
 
 const LightColors: { [key in colorVariants]: string } = {
   primary: "#fff",
@@ -29,12 +29,21 @@ export const defaultTheme: DefaultTheme = {
     xxl: 1400,
   },
 
-  mediaFor: function (type: "min" | "max", breakPoint: Breakpoints): string {
-    return `@media (${type}-width: ${
-      type === "min"
-        ? this.breakPoints[breakPoint]
-        : this.breakPoints[breakPoint] - 1
-    }px)`;
+  mediaFor: function (type: "min" | "max"|"bw", breakPoint: mediaBreakpoints):string {
+   if(breakPoint.for &&(type === "min" || type ===  "max")){
+     return `@media (${type}-width: ${
+       type === "min"
+         ? this.breakPoints[breakPoint.for]
+         : this.breakPoints[breakPoint.for] - 1
+     }px)`;
+   }
+
+   if(type === "bw" &&  breakPoint.range){
+     const {from , to} = breakPoint.range
+     return `@media (min-width:${this.breakPoints[from] + 1}px) and (max-width:${this.breakPoints[to]}px)`
+   }
+
+   return "@media"
   },
 
   changeMode: function (mode: Mode) {

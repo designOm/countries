@@ -1,6 +1,6 @@
 // import original module declarations
 import "styled-components";
-import { Breakpoints, colorVariants, Mode } from "./types";
+import { Breakpoints, colorVariants, mediaBreakpoints, Mode } from "./types";
 
 // and extend them!
 declare module "styled-components" {
@@ -12,7 +12,7 @@ declare module "styled-components" {
     breakPoints: {
       [key in Breakpoints]: number;
     };
-    mediaFor: (type: "min" | "max", breakPoints: Breakpoints) => string;
+    mediaFor: (type: "min" | "max"| "bw", breakPoints: mediaBreakpoints) => string;
     changeMode: (mode: Mode) => void;
   }
 }

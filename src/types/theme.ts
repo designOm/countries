@@ -12,3 +12,7 @@ export type colorVariants =
 export type Colors = {
   [key in colorVariants]: string;
 };
+
+export interface mediaBreakpoints {range?:{from:Breakpoints , to:Breakpoints},
+for?:Breakpoints
+}
