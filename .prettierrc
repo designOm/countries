@@ -1,4 +1,8 @@
 {
   "tabWidth": 2,
-  "useTabs": false
+  "useTabs": false,
+  "endOfLine": "lf",
+  "printWidth": 500,
+  "embeddedLanguageFormatting": "auto",
+  "react/jsx-max-props-per-line": [1, { "when": "always" }]
 }
